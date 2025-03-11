@@ -2,11 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch: Docker Container",
+            "name": "Launch: Server",
             "command": "docker-compose up",
             "request": "launch",
             "preLaunchTask": "Build: Docker Images",
             "type": "node-terminal"
+        },
+        {
+            "name": "Launch: Client",
+            "command": "${command:python.interpreterPath}", // to handle venv stuffs
+            "request": "launch" // update to launch python VM stuffs
         }
     ],
     "compounds": []
