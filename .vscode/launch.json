@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch: Docker Container",
+            "command": "docker-compose up",
+            "request": "launch",
+            "preLaunchTask": "Build: Docker Images",
+            "type": "node-terminal"
+        }
+    ],
+    "compounds": []
+}
