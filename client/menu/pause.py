@@ -1,6 +1,7 @@
 import pygame, os
 from menu.menu import Menu
 from menu.options import GameOptionsMenu, AudioOptionsMenu, VideoOptionsMenu, ControlsOptionsMenu
+# TODO: abstract most logic here to the Menu Base Class
 
 class PauseMenu(Menu):
     def __init__(self, game):

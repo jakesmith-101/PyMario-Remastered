@@ -30,7 +30,7 @@ class Game():
             self.update()
             self.render()
     
-    def get_events(self):
+    def get_events(self): # rewrite to make controls changable
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running, self.playing = False, False
@@ -71,7 +71,6 @@ class Game():
 
     def render(self):
         self.state_stack[-1].render(self.game_canvas)
-        # Render current state to the screen
         self.screen.blit(pygame.transform.scale(self.game_canvas,(self.SCREEN_WIDTH, self.SCREEN_HEIGHT)), (0,0))
         pygame.display.flip()
 
