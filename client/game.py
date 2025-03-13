@@ -4,6 +4,11 @@ from menu.menu import Menu
 
 class Game():
     def __init__(self):
+        pygame.init()
+        self.GAME_W,self.GAME_H = 480, 270
+        self.SCREEN_WIDTH,self.SCREEN_HEIGHT = 960, 540
+        self.game_canvas = pygame.Surface((self.GAME_W,self.GAME_H))
+        self.screen = pygame.display.set_mode((self.SCREEN_WIDTH,self.SCREEN_HEIGHT))
         self.running, self.playing = False, False
         self.actions = {
             'up': False,
@@ -13,6 +18,7 @@ class Game():
         }
         self.dt, self.prev_time = 0, 0
         self.state_stack = []
+        self.load_states()
     
     def game_loop(self):
         while self.playing:
