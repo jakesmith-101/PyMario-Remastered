@@ -22,6 +22,7 @@ class Game():
         self.dt, self.prev_time = 0, 0
         self.state_stack = []
         self.load_states()
+        self.load_static_assets()
     
     def game_loop(self):
         while self.playing:
@@ -82,6 +83,9 @@ class Game():
     def load_states(self):
         self.title_screen = Menu(self)
         self.state_stack.append(self.title_screen)
+    
+    def load_static_assets(self):
+        pass # link to assets.static import
 
     def reset_keys(self):
         for action in self.actions:

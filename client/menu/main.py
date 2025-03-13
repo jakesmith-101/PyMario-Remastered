@@ -1,5 +1,5 @@
 from menu.menu import Menu
-from game import Game_World
+from world.world import World
 
 class MainMenu(Menu):
     def __init__(self, game):
@@ -8,7 +8,7 @@ class MainMenu(Menu):
 
     def update(self, delta_time, actions):
         if actions["start"]:
-            new_state = Game_World(self.game)
+            new_state = World(self.game)
             new_state.enter_state()
         self.game.reset_keys()
 
