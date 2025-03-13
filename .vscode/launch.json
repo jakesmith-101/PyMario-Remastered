@@ -9,6 +9,7 @@
             "type": "node-terminal"
         },
         {
+            "type": "node-terminal",
             "name": "Launch: Client",
             "command": "${command:python.interpreterPath}", // to handle venv stuffs
             "request": "launch" // update to launch python VM stuffs
